@@ -32,7 +32,7 @@ class TasksController < ApplicationController
 
     if @task.save
       redirect_to @task, notice: "タスク「#{@task.name}」を登録しました"
-    begin
+    else
       render :new
     end
   end
